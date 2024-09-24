@@ -10,7 +10,7 @@ def test_q1_1(capsys):
 	except:
 		sys.exit()
 
-	input_values = [5]
+	input_values = [5, 9]
 
 	def mock_input(s):
 		print(s, end='')
@@ -29,7 +29,7 @@ def test_q2_1(capsys):
 	except:
 		sys.exit()
 
-	input_values = [9]
+	input_values = [55, 10]
 
 	def mock_input(s):
 		print(s, end='')
@@ -48,7 +48,7 @@ def test_q3_1(capsys):
 	except:
 		sys.exit()
 
-	input_values = [55]
+	input_values = []
 
 	def mock_input(s):
 		print(s, end='')
@@ -67,7 +67,7 @@ def test_q4_1(capsys):
 	except:
 		sys.exit()
 
-	input_values = [10]
+	input_values = [11, 2.2]
 
 	def mock_input(s):
 		print(s, end='')
@@ -78,7 +78,7 @@ def test_q4_1(capsys):
 	captured = capsys.readouterr()
 	assert captured.out == "Input a number: Input a number: 24\n"
 
-def test_q5_1(capsys):
+def test_q1_2(capsys):
 
 	try:
 		exists = os.path.exists("{fileName}.py")
@@ -86,18 +86,18 @@ def test_q5_1(capsys):
 	except:
 		sys.exit()
 
-	input_values = [11]
+	input_values = [2, 4]
 
 	def mock_input(s):
 		print(s, end='')
 		return input_values.pop(0)
 	PP1_6.input = mock_input
 
-	PP1_6.q5()
+	PP1_6.q1()
 	captured = capsys.readouterr()
 	assert captured.out == "Input a number: Input a number: 6\n"
 
-def test_q6_1(capsys):
+def test_q2_2(capsys):
 
 	try:
 		exists = os.path.exists("{fileName}.py")
@@ -105,7 +105,7 @@ def test_q6_1(capsys):
 	except:
 		sys.exit()
 
-	input_values = [2.2]
+	input_values = [7, 5]
 
 	def mock_input(s):
 		print(s, end='')
@@ -116,7 +116,7 @@ def test_q6_1(capsys):
 	captured = capsys.readouterr()
 	assert captured.out == "Input a number: Input a number: 1\n"
 
-def test_q1_2(capsys):
+def test_q3_2(capsys):
 
 	try:
 		exists = os.path.exists("{fileName}.py")
@@ -124,7 +124,7 @@ def test_q1_2(capsys):
 	except:
 		sys.exit()
 
-	input_values = [2]
+	input_values = []
 
 	def mock_input(s):
 		print(s, end='')
@@ -135,7 +135,7 @@ def test_q1_2(capsys):
 	captured = capsys.readouterr()
 	assert captured.out == "hello Mr. Kalisz have you seen my work yet?\n"
 
-def test_q2_2(capsys):
+def test_q4_2(capsys):
 
 	try:
 		exists = os.path.exists("{fileName}.py")
@@ -143,7 +143,7 @@ def test_q2_2(capsys):
 	except:
 		sys.exit()
 
-	input_values = [4]
+	input_values = [5.2, 1.4]
 
 	def mock_input(s):
 		print(s, end='')
